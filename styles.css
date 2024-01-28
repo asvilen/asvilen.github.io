@@ -4,6 +4,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: aliceblue;
+    font-size: 14px;
 }
 
 html {
@@ -17,10 +19,10 @@ html {
     position: absolute;
     padding: 1em;
     width: 100%;
-    /* background-color: skyblue; */
     background-color: black;
     opacity: 0.5;
     z-index: 1;
+
 }
 
 .header__title {
@@ -29,7 +31,6 @@ html {
     left: 10%;
 
     text-transform: uppercase;
-    color: aliceblue;
 
 }
 
@@ -50,7 +51,6 @@ html {
 .header__nav a {
     text-transform: uppercase;
     text-decoration: none;
-    color: aliceblue;
 }
 
 .header__nav a:hover {
@@ -61,9 +61,9 @@ html {
 /* MAIN HOME */
 
 .main__home {
-    background-image: url(./images/home.avif);
+    background-image: url(./images/home-5.avif);
     background-size: cover;
-    background-position: top center;
+    background-position: center center;
     position: relative;
     z-index: 0;
 }
@@ -85,7 +85,8 @@ html {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+    padding: 1em;
 }
 
 
@@ -149,6 +150,6 @@ html {
 
 @keyframes text_reveal {
     100%{
-        color: white
+        color: aliceblue
     }
 }
