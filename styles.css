@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: Ruda, sans-serif;
+}
+
+/* HEADER */
+
+.header {
+    position: absolute;
+    padding: 1em;
+    width: 100%;
+    /* background-color: skyblue; */
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.header__title {
+    display: inline-block;
+    position: relative;
+    left: 10%;
+
+    text-transform: uppercase;
+    color: aliceblue;
+
+}
+
+.header__nav {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    transform: translate(50%, -50%);
+
+}
+
+.header__nav ul li {
+    display: inline-block;
+    margin-left: 1.4em;
+}
+
+.header__nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.header__nav a:hover {
+    color: red;
+}
+
+
+/* MAIN HOME */
+
+.main__home {
+    background-image: url(./images/home.avif);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 0;
+}
+
+.main__home::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.main__home {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main__home h1 {
+    display: block;
+    position: relative;
+    width: fit-content;
+    font-size: 4em;
+    color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1s;
+}
+
+.main__home h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.main__home h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.main__home h1:nth-child(3) {
+    animation-delay: 3s;
+}
+
+.main__home h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: red;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 0.5s;
+}
+
+.main__home h1:nth-child(1) span {
+    animation-delay: 0,5s;
+}
+
+.main__home h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+.main__home h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+/* Keyframes */
+
+@keyframes text_reveal_box {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100%{
+        color: white
+    }
+}
