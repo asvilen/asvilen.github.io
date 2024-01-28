@@ -1,16 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@600&display=swap');
 
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: aliceblue;
     font-size: 14px;
+    color: aliceblue;
 }
 
 html {
     font-size: 10px;
     font-family: Ruda, sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 1em;
+}
+
+ .section-title {
+    font-size: 4em;
+    margin-bottom: 0.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: black;
+}
+
+.section-title span {
+    font-size: inherit;
+    color: red;
 }
 
 /* HEADER */
@@ -80,16 +104,6 @@ html {
     z-index: -1;
 }
 
-.main__home {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 1em;
-}
-
-
 .main__home h1 {
     display: block;
     position: relative;
@@ -109,7 +123,9 @@ html {
 }
 
 .main__home h1:nth-child(3) {
+    animation: text_reveal_name 0.5s ease forwards;
     animation-delay: 3s;
+    
 }
 
 .main__home h1 span {
@@ -135,6 +151,63 @@ html {
     animation-delay: 2.5s;
 }
 
+/* Skills Section */
+
+.main__skills {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.main__skills_header p {
+    font-size: 1.4em;
+    margin-top: 0.5em;
+    line-height: 2em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: black;
+}
+
+.main__skills_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main__skills_main__item {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+    border-radius: 1em;
+    background-image: url(./images/skills-3.avif);
+    background-size: cover;
+    margin: 0.7em;
+    height: 20em;
+}
+
+.main__skills_main__item h2 {
+    font-size: 2em;
+    color: crimson;
+}
+
+.main__skills_main__item__more {
+    font-size: 1em;
+    color: crimson;
+    cursor: pointer;
+}
+
+.main__skills_main__item__more:hover {
+    color: red;
+    font-weight: 900;
+}
+
+/* END  Skills Section */
+
 /* Keyframes */
 
 @keyframes text_reveal_box {
@@ -153,3 +226,12 @@ html {
         color: aliceblue
     }
 }
+
+@keyframes text_reveal_name {
+    100%{
+        color: crimson;
+        font-weight: 900;
+    }
+}
+
+/* End Keyframes */
