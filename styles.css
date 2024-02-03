@@ -46,7 +46,6 @@ html {
     background-color: black;
     opacity: 0.5;
     z-index: 1;
-
 }
 
 .header__title {
@@ -181,13 +180,21 @@ html {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     padding: 1em;
     border-radius: 1em;
-    background-image: url(./images/skills-3.avif);
+    background-image: url(./images/skills-10.avif);
     background-size: cover;
     margin: 0.7em;
-    height: 20em;
+    min-height: 20em;
+    height: max-content;
+}
+
+.main__skills_main__item > * {
+    text-align: right;
+    width: 70%;
+    margin-left: auto;
 }
 
 .main__skills_main__item h2 {
@@ -204,6 +211,23 @@ html {
 .main__skills_main__item__more:hover {
     color: red;
     font-weight: 900;
+}
+
+details {
+    display: flex;
+    margin-top: 0.5em;
+}
+
+summary {
+    cursor: pointer;
+    /* text-decoration: underline; */
+    /* text-align: center; */
+    /* border: 1px solid; */
+    color: crimson;
+}
+
+summary:hover {
+    color: red;
 }
 
 /* END  Skills Section */
