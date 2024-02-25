@@ -36,6 +36,26 @@ html {
     color: red;
 }
 
+.cta {
+    display: inline-block;
+    padding: 0.7em 2.5em;
+    color: black;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    margin: 3em;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+.cta:hover {
+    background-color: crimson;
+    color: white;
+}
+
+
 /* HEADER */
 
 .header {
@@ -253,11 +273,13 @@ html {
 .project-img {
     filter: brightness(0.5);
     height: 20em;
+    overflow: hidden;
 }
 
 .project-img img {
     width: 100%;
     height: auto;
+    transition: .3s ease transform;
 }
 
 .project-item:hover .project-img img {
@@ -266,6 +288,96 @@ html {
 
 /* End Projects Section */
 
+/* About Section */
+.about {
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+.about .col-left {
+    width: 250px;
+    height: 360px;
+}
+
+.about .col-left img {
+    width: 100%;
+    height: auto;
+}
+
+.about .col-right {
+    width: 100%;
+}
+
+.about .col-right h2 {
+    font-size: 1.8em;
+    letter-spacing: 0.1em;
+    margin-bottom: 1em;
+    color: black;
+}
+
+.about p {
+    color: black;
+}
+
+.about-img {
+    width: 100%;
+    height: 69%;
+    position: relative;
+    border: 1.2em solid white;
+}
+
+.about-img:after {
+    content: '';
+    position: absolute;
+    left: -2em;
+    top: 1.5em;
+    height: 98%;
+    width: 98%;
+    border: 0.5em solid crimson;
+    z-index: -1;
+}
+
+/* End About Section */
+
+/* Contact Section */
+.contact {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    width: 80%;
+    padding: 2em;
+    text-align: center;
+    border-radius: 10px;
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4em 0 #0000002c;
+    transition: 0.3s ease box-shadow;
+}
+
+.contact-item:hover {
+    box-shadow: 0 0 5px 0 #0000002c;
+}
+
+.icon i {
+    font-size: 2em;
+    color: crimson;
+    margin-bottom: 0.5em;
+}
+
+.contact-info > * {
+    color: black;
+}
+
+/* End Contact Section */
 
 /* Keyframes */
 
