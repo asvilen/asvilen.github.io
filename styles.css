@@ -272,7 +272,7 @@ html {
 
 .project-img {
     filter: brightness(0.5);
-    height: 20em;
+    height: 15em;
     overflow: hidden;
 }
 
@@ -308,7 +308,7 @@ html {
 }
 
 .about .col-right {
-    width: 100%;
+    width: 80%;
 }
 
 .about .col-right h2 {
@@ -378,6 +378,42 @@ html {
 }
 
 /* End Contact Section */
+
+/* Footer */
+.footer {
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    /* min-height: 200px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 3em 0 2em;
+    font-weight: 500;
+    /* font-size: 1.5em; */
+    /* letter-spacing: .1em; */
+
+}
+
+.footer h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.footer h1 span {
+    color: crimson;
+}
+
+.social-icon {
+    display: flex;
+    gap: 1em;
+}
+.social-item {
+    font-size: 2.5em;
+}
+.social-item:hover {
+    transform: scale(1.1);
+}
+
+/* End Footer */
 
 /* Keyframes */
 
